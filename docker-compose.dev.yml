@@ -1,0 +1,12 @@
+services:
+  postgres:
+    image: 'postgres:latest'
+    restart: always
+    environment:
+      - 'POSTGRES_DB=techPrueba'
+      - 'POSTGRES_PASSWORD=Lapiz123*@'
+      - 'POSTGRES_USER=user'
+    ports:
+      - '8523:5432'
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
